@@ -84,7 +84,7 @@ const PricingSection = () => {
                 <ul className="my-6 space-y-4 flex-grow">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
-                      <Check className={`h-5 w-5 mt-0.5 ${plan.popular ? 'text-green-400' : 'text-green-400'}`} />
+                      <Check className={`h-5 w-5 mt-0.5 ${plan.popular ? 'text-[#a4ff90]' : 'text-[#a4ff90]'}`} />
                       <span>{feature.text}</span>
                     </li>
                   ))}
@@ -101,7 +101,7 @@ const PricingSection = () => {
                   className={`mt-6 w-full ${
                     plan.popular 
                       ? 'bg-white text-gray-900 hover:bg-gray-200' 
-                      : 'bg-green-400 text-white hover:bg-green-500'
+                      : 'bg-[#a4ff90] text-gray-800 hover:bg-[#8dff77]'
                   }`}
                 >
                   {plan.ctaText}
@@ -113,7 +113,7 @@ const PricingSection = () => {
         </div>
         
         <div className="text-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
+          <Button size="lg" className="bg-[#a4ff90] hover:bg-[#8dff77] text-gray-800">
             Start Now – Book a Call
           </Button>
         </div>
