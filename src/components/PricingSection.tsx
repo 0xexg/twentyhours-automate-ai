@@ -116,7 +116,7 @@ const PricingSection = () => {
         </div>
         
         <div className="text-center">
-          <Button size="lg" className="bg-[#a4ff90] hover:bg-[#8dff77] text-gray-800">
+          <Button size="lg" className="bg-white hover:bg-gray-100 text-gray-800 border border-gray-200">
             Start Now – Book a Call
           </Button>
         </div>
