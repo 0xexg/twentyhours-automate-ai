@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import Companies from '@/components/Companies';
 import Announcement from '@/components/Announcement';
 
 const Index = () => {
@@ -10,6 +11,7 @@ const Index = () => {
       <Announcement />
       <Navbar />
       <Hero />
+      <Companies />
     </div>
   );
 };
