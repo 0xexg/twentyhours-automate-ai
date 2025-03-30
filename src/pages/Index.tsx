@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Companies from '@/components/Companies';
 import Announcement from '@/components/Announcement';
+import AutomationFeatures from '@/components/AutomationFeatures';
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Companies />
+      <AutomationFeatures />
     </div>
   );
 };
