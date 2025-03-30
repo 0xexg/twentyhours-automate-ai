@@ -11,7 +11,9 @@ const Hero = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 tracking-tight mb-6">
               Automate Everything.
               <br />
-              <span className="text-primary">It'll Be Done in 20 Hours.</span>
+              <span className="text-primary">It'll Be Done in 
+                <br />
+                20 Hours.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 md:max-w-2xl">
               Transform your business with intelligent AI agents and automations. Save time, reduce errors, and boost growth.
@@ -34,7 +36,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="border-t border-gray-100"></div>
     </div>
   );
 };
