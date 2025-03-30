@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   UserCheck, 
@@ -7,7 +8,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 
 const AutomationFeatures = () => {
   const categories = [
@@ -81,11 +81,6 @@ const AutomationFeatures = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Button variant="outline" className="mt-auto">
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
               </CardContent>
             </Card>
           ))}
@@ -100,3 +95,4 @@ const AutomationFeatures = () => {
 };
 
 export default AutomationFeatures;
+
