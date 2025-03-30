@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Feature } from '@/types';
 import { 
   Bot, 
   ArrowRight, 
@@ -18,87 +17,48 @@ import {
   Calendar
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 const AutomationFeatures = () => {
   const categories = [
     {
       title: "Sales & CRM",
+      icon: <UserCheck className="h-8 w-8 text-primary" />,
+      description: "Automate lead tracking, follow-ups, CRM data enrichment, and intelligent lead research.",
       features: [
-        {
-          icon: <UserCheck className="h-6 w-6 text-primary" />,
-          title: 'Lead tracking & follow-up',
-          description: 'Automatically track leads and schedule follow-ups to ensure no opportunity slips through the cracks.'
-        },
-        {
-          icon: <RefreshCw className="h-6 w-6 text-primary" />,
-          title: 'CRM data enrichment & cleanup',
-          description: 'Keep your CRM data clean, updated, and enriched with relevant information automatically.'
-        },
-        {
-          icon: <SearchCheck className="h-6 w-6 text-primary" />,
-          title: 'Lead researcher',
-          description: 'Intelligent research on potential leads to provide valuable insights for your sales team.'
-        }
+        "Lead tracking & follow-up",
+        "CRM data enrichment & cleanup",
+        "Lead researcher"
       ]
     },
     {
       title: "Marketing & SEO",
+      icon: <BarChart className="h-8 w-8 text-primary" />,
+      description: "Optimize content, improve search rankings, and monitor brand sentiment automatically.",
       features: [
-        {
-          icon: <FileSpreadsheet className="h-6 w-6 text-primary" />,
-          title: 'Blog post repurposer',
-          description: 'Convert existing content into multiple formats to maximize reach across different platforms.'
-        },
-        {
-          icon: <BarChart className="h-6 w-6 text-primary" />,
-          title: 'SEO audit & keyword optimizer',
-          description: 'Analyze and optimize your content for better search engine visibility and rankings.'
-        },
-        {
-          icon: <Search className="h-6 w-6 text-primary" />,
-          title: 'Reddit sentiment tracker',
-          description: 'Monitor and analyze sentiment about your brand or industry across Reddit communities.'
-        }
+        "Blog post repurposer",
+        "SEO audit & keyword optimizer",
+        "Reddit sentiment tracker"
       ]
     },
     {
       title: "Web Scraping",
+      icon: <Globe className="h-8 w-8 text-primary" />,
+      description: "Extract valuable data from websites, LinkedIn, and other online resources effortlessly.",
       features: [
-        {
-          icon: <Globe className="h-6 w-6 text-primary" />,
-          title: 'Lead website scraper',
-          description: 'Scrape and categorize potential lead websites to build targeted prospect lists.'
-        },
-        {
-          icon: <Bot className="h-6 w-6 text-primary" />,
-          title: 'LinkedIn company page scraper',
-          description: 'Extract valuable data from LinkedIn company pages to enhance your lead database.'
-        },
-        {
-          icon: <Sparkles className="h-6 w-6 text-primary" />,
-          title: 'URL metadata extractor',
-          description: 'Automatically pull and organize metadata from URLs for research and analysis.'
-        }
+        "Lead website scraper",
+        "LinkedIn company page scraper",
+        "URL metadata extractor"
       ]
     },
     {
       title: "Operations & Admin",
+      icon: <FileText className="h-8 w-8 text-primary" />,
+      description: "Streamline document processing, email management, and scheduling to save time.",
       features: [
-        {
-          icon: <FileText className="h-6 w-6 text-primary" />,
-          title: 'Document processing',
-          description: 'Extract data from PDFs, perform data entry, and organize documents automatically.'
-        },
-        {
-          icon: <Zap className="h-6 w-6 text-primary" />,
-          title: 'Email triage & auto-responses',
-          description: 'Sort incoming emails by priority and send automated responses to common inquiries.'
-        },
-        {
-          icon: <Calendar className="h-6 w-6 text-primary" />,
-          title: 'Calendar & meeting scheduling',
-          description: 'Automate the scheduling process and eliminate back-and-forth emails for appointments.'
-        }
+        "Document processing",
+        "Email triage & auto-responses",
+        "Calendar & meeting scheduling"
       ]
     }
   ];
@@ -113,27 +73,33 @@ const AutomationFeatures = () => {
           </p>
         </div>
 
-        {categories.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-16 last:mb-0">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">{category.title}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.features.map((feature, featureIndex) => (
-                <Card key={featureIndex} className="bg-white border border-gray-100 hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground mb-4">{feature.description}</p>
-                    <a href="#" className="inline-flex items-center text-primary font-medium">
-                      Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {categories.map((category, index) => (
+            <Card key={index} className="bg-white border border-gray-100 hover:shadow-md transition-shadow h-full">
+              <CardContent className="p-6">
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                  {category.icon}
+                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-3">{category.title}</h3>
+                <p className="text-muted-foreground mb-4">{category.description}</p>
+                
+                <ul className="space-y-2 mb-6">
+                  {category.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <ArrowRight className="h-4 w-4 text-primary mt-1 mr-2 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <Button variant="outline" className="mt-auto">
+                  Learn more
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
