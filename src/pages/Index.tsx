@@ -8,6 +8,7 @@ import AutomationFeatures from '@/components/AutomationFeatures';
 import HowItWorks from '@/components/HowItWorks';
 import PricingSection from '@/components/PricingSection';
 import CTASection from '@/components/CTASection';
+import { Separator } from '@/components/ui/separator';
 
 const Index = () => {
   return (
@@ -15,10 +16,15 @@ const Index = () => {
       <Announcement />
       <Navbar />
       <Hero />
+      <Separator className="w-full border-t border-gray-100" />
       <Companies />
+      <Separator className="w-full border-t border-gray-100" />
       <AutomationFeatures />
+      <Separator className="w-full border-t border-gray-100" />
       <HowItWorks />
+      <Separator className="w-full border-t border-gray-100" />
       <PricingSection />
+      <Separator className="w-full border-t border-gray-100" />
       <CTASection />
     </div>
   );

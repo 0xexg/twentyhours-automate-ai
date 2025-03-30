@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Announcement from '@/components/Announcement';
 import AutomationFeatures from '@/components/AutomationFeatures';
 import CTASection from '@/components/CTASection';
+import { Separator } from '@/components/ui/separator';
 
 const Features = () => {
   return (
@@ -11,6 +12,7 @@ const Features = () => {
       <Announcement />
       <Navbar />
       <AutomationFeatures />
+      <Separator className="w-full border-t border-gray-100" />
       <CTASection />
     </div>
   );
