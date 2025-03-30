@@ -44,8 +44,7 @@ const PricingSection = () => {
     description: "For high-growth businesses needing full ops leadership",
     price: "$7,900",
     features: [{
-      text: "Everything in Automation Partner, plus:",
-      icon: null
+      text: "Everything in Automation Partner, plus:"
     }, {
       text: "Unlimited automation requests"
     }, {
@@ -92,7 +91,9 @@ const PricingSection = () => {
                   {feature.icon !== null && (
                     <Check className={`h-5 w-5 ${plan.popular ? 'text-[#a4ff90]' : 'text-[#a4ff90]'}`} />
                   )}
-                  <span>{feature.text}</span>
+                  <span className={featureIndex === 0 && plan.popular ? 'italic' : ''}>
+                    {feature.text}
+                  </span>
                 </li>
               ))}
             </ul>
