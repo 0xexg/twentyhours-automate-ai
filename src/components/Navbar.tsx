@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
           
           <div className="flex items-center">
-            <Button variant="default" className="bg-primary hover:bg-primary/90 text-white rounded-md px-4 py-2">
+            <Button variant="default" className="bg-primary hover:bg-primary/90 text-gray-800 rounded-md px-4 py-2">
               Get started
             </Button>
           </div>

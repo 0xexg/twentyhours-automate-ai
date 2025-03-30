@@ -33,7 +33,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#2563EB', // Blue accent color
+					DEFAULT: '#a4ff90', // Changed from #2563EB to #a4ff90
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {

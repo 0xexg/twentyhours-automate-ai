@@ -17,7 +17,7 @@ const Hero = () => {
               Transform your business with intelligent AI agents and automations. Save time, reduce errors, and boost productivity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button variant="default" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md text-base font-medium">
+              <Button variant="default" className="bg-primary hover:bg-primary/90 text-gray-800 px-6 py-3 rounded-md text-base font-medium">
                 Get Started – Book a Call
               </Button>
               <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-md text-base font-medium">
