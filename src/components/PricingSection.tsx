@@ -3,9 +3,11 @@ import { Check, Zap, Rocket, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+
 interface PricingFeature {
   text: string;
 }
+
 interface PricingPlan {
   icon: React.ReactNode;
   name: string;
@@ -15,6 +17,7 @@ interface PricingPlan {
   ctaText: string;
   popular?: boolean;
 }
+
 const PricingSection = () => {
   const plans: PricingPlan[] = [{
     icon: <Zap className="h-6 w-6 text-primary" />,
@@ -41,7 +44,8 @@ const PricingSection = () => {
     description: "For high-growth businesses needing full ops leadership",
     price: "$7,900",
     features: [{
-      text: "Everything in Automation Partner, plus:"
+      text: "Everything in Automation Partner, plus:",
+      icon: null
     }, {
       text: "Unlimited automation requests"
     }, {
@@ -56,57 +60,59 @@ const PricingSection = () => {
     ctaText: "Start now",
     popular: true
   }];
-  return <section className="py-16 bg-white border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Pricing</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Choose the plan that fits your business needs.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {plans.map((plan, index) => <Card key={index} className={`overflow-hidden flex flex-col ${plan.popular ? 'bg-gray-900 text-white' : 'bg-white border border-gray-100'} hover:shadow-xl transition-shadow`}>
-              <CardContent className="p-8 flex flex-col h-full">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className={`p-2 rounded-full ${plan.popular ? 'bg-white/10' : 'bg-primary/10'}`}>
-                    {plan.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold">{plan.name}</h3>
-                </div>
-                
-                <p className={`mb-6 ${plan.popular ? 'text-gray-300' : 'text-gray-600'}`}>
-                  {plan.description}
-                </p>
-                
-                <Separator className={plan.popular ? 'bg-gray-700' : 'bg-gray-200'} />
-                
-                <ul className="my-6 space-y-4 flex-grow">
-                  {plan.features.map((feature, featureIndex) => <li key={featureIndex} className="flex items-start gap-3">
-                      <Check className={`h-5 w-5 mt-0.5 ${plan.popular ? 'text-[#a4ff90]' : 'text-[#a4ff90]'}`} />
-                      <span>{feature.text}</span>
-                    </li>)}
-                </ul>
-                
-                <Separator className={plan.popular ? 'bg-gray-700' : 'bg-gray-200'} />
-                
-                <div className="mt-6 flex items-end gap-2">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className={`mb-1 ${plan.popular ? 'text-gray-300' : 'text-gray-500'}`}>USD/month</span>
-                </div>
-                
-                <Button className={`mt-6 w-full ${plan.popular ? 'bg-white text-gray-900 hover:bg-gray-200' : 'bg-[#a4ff90] text-gray-800 hover:bg-[#8dff77]'}`}>
-                  {plan.ctaText}
-                  <ArrowRight className="h-4 w-4 ml-2" />
-                </Button>
-              </CardContent>
-            </Card>)}
-        </div>
-        
-        <div className="text-center">
-          
-        </div>
+  return <section className="py-16 bg-white border-t border-gray-100">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Pricing</h2>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          Choose the plan that fits your business needs.
+        </p>
       </div>
-    </section>;
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        {plans.map((plan, index) => <Card key={index} className={`overflow-hidden flex flex-col ${plan.popular ? 'bg-gray-900 text-white' : 'bg-white border border-gray-100'} hover:shadow-xl transition-shadow`}>
+          <CardContent className="p-8 flex flex-col h-full">
+            <div className="flex items-center gap-2 mb-2">
+              <div className={`p-2 rounded-full ${plan.popular ? 'bg-white/10' : 'bg-primary/10'}`}>
+                {plan.icon}
+              </div>
+              <h3 className="text-2xl font-bold">{plan.name}</h3>
+            </div>
+            
+            <p className={`mb-6 ${plan.popular ? 'text-gray-300' : 'text-gray-600'}`}>
+              {plan.description}
+            </p>
+            
+            <Separator className={plan.popular ? 'bg-gray-700' : 'bg-gray-200'} />
+            
+            <ul className="my-6 space-y-4 flex-grow">
+              {plan.features.map((feature, featureIndex) => (
+                <li key={featureIndex} className="flex items-center gap-3">
+                  {feature.icon !== null && (
+                    <Check className={`h-5 w-5 ${plan.popular ? 'text-[#a4ff90]' : 'text-[#a4ff90]'}`} />
+                  )}
+                  <span>{feature.text}</span>
+                </li>
+              ))}
+            </ul>
+            
+            <Separator className={plan.popular ? 'bg-gray-700' : 'bg-gray-200'} />
+            
+            <div className="mt-6 flex items-end gap-2">
+              <span className="text-4xl font-bold">{plan.price}</span>
+              <span className={`mb-1 ${plan.popular ? 'text-gray-300' : 'text-gray-500'}`}>USD/month</span>
+            </div>
+            
+            <Button className={`mt-6 w-full ${plan.popular ? 'bg-white text-gray-900 hover:bg-gray-200' : 'bg-[#a4ff90] text-gray-800 hover:bg-[#8dff77]'}`}>
+              {plan.ctaText}
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </Button>
+          </CardContent>
+        </Card>)}
+      </div>
+    </div>
+  </section>;
 };
+
 export default PricingSection;
