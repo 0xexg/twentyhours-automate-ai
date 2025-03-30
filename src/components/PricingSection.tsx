@@ -19,46 +19,49 @@ interface PricingPlan {
 }
 
 const PricingSection = () => {
-  const plans: PricingPlan[] = [{
-    icon: <Zap className="h-6 w-6 text-primary" />,
-    name: "Automation Partner",
-    description: "For teams who want scalable AI workflows",
-    price: "$4,900",
-    features: [{
-      text: "10 agent & automation requests/month"
-    }, {
-      text: "1 dedicated automation specialist"
-    }, {
-      text: "Slack support"
-    }, {
-      text: "Dashboard access (track all automations)"
-    }, {
-      text: "Weekly 45-min strategy call"
-    }, {
-      text: "No contract, cancel any time"
-    }],
-    ctaText: "Start now"
-  }, {
-    icon: <Rocket className="h-6 w-6 text-primary" />,
-    name: "Fractional COO",
-    description: "For high-growth businesses needing full ops leadership",
-    price: "$7,900",
-    features: [{
-      text: "Everything in Automation Partner, plus:"
-    }, {
-      text: "Unlimited automation requests"
-    }, {
-      text: "Scaled technical team to support more development"
-    }, {
-      text: "Custom AI agents (built for your unique workflows)"
-    }, {
-      text: "Priority AI agent and automation development"
-    }, {
-      text: "Custom analytics & reporting"
-    }],
-    ctaText: "Start now",
-    popular: true
-  }];
+  const plans: PricingPlan[] = [
+    {
+      icon: <Zap className="h-6 w-6 text-primary" />,
+      name: "Automation Partner",
+      description: "For teams who want scalable AI workflows",
+      price: "$4,900",
+      features: [{
+        text: "10 agent & automation requests/month"
+      }, {
+        text: "1 dedicated automation specialist"
+      }, {
+        text: "Slack support"
+      }, {
+        text: "Dashboard access (track all automations)"
+      }, {
+        text: "Weekly 45-min strategy call"
+      }, {
+        text: "No contract, cancel any time"
+      }],
+      ctaText: "Start now"
+    },
+    {
+      icon: <Rocket className="h-6 w-6 text-primary" />,
+      name: "Fractional COO",
+      description: "For high-growth businesses needing full ops leadership",
+      price: "$7,900",
+      features: [{
+        text: "Everything in Automation Partner, plus:"
+      }, {
+        text: "Unlimited automation requests"
+      }, {
+        text: "Scaled technical team to support more development"
+      }, {
+        text: "Custom AI agents (built for your unique workflows)"
+      }, {
+        text: "Priority AI agent and automation development"
+      }, {
+        text: "Custom analytics & reporting"
+      }],
+      ctaText: "Start now",
+      popular: true
+    }
+  ];
 
   return <section className="py-16 bg-white border-t border-gray-100">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,7 +91,7 @@ const PricingSection = () => {
             <ul className="my-6 space-y-4 flex-grow">
               {plan.features.map((feature, featureIndex) => (
                 <li key={featureIndex} className="flex items-center gap-3">
-                  {feature.icon !== null && (
+                  {featureIndex !== 0 && (
                     <Check className={`h-5 w-5 ${plan.popular ? 'text-[#a4ff90]' : 'text-[#a4ff90]'}`} />
                   )}
                   <span className={featureIndex === 0 && plan.popular ? 'italic' : ''}>
