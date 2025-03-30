@@ -8,6 +8,7 @@ import AutomationFeatures from '@/components/AutomationFeatures';
 import HowItWorks from '@/components/HowItWorks';
 import PricingSection from '@/components/PricingSection';
 import CTASection from '@/components/CTASection';
+import Divider from '@/components/Divider';
 
 const Index = () => {
   return (
@@ -15,10 +16,15 @@ const Index = () => {
       <Announcement />
       <Navbar />
       <Hero />
+      <Divider />
       <Companies />
+      <Divider />
       <AutomationFeatures />
+      <Divider />
       <HowItWorks />
+      <Divider />
       <PricingSection />
+      <Divider />
       <CTASection />
     </div>
   );
