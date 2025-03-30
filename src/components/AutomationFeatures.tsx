@@ -1,20 +1,11 @@
 
 import React from 'react';
 import { 
-  Bot, 
-  ArrowRight, 
-  RefreshCw, 
-  Sparkles, 
-  Clock, 
-  Zap,
-  UserCheck,
-  SearchCheck,
-  FileSpreadsheet,
-  BarChart,
-  Search,
-  Globe,
+  UserCheck, 
+  BarChart, 
+  Globe, 
   FileText,
-  Calendar
+  ArrowRight
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -26,7 +17,7 @@ const AutomationFeatures = () => {
       icon: <UserCheck className="h-8 w-8 text-primary" />,
       description: "Automate lead tracking, follow-ups, CRM data enrichment, and intelligent lead research.",
       features: [
-        "Lead tracking & follow-up",
+        "Lead tracking & follow-up automations",
         "CRM data enrichment & cleanup",
         "Lead researcher"
       ]
@@ -37,7 +28,7 @@ const AutomationFeatures = () => {
       description: "Optimize content, improve search rankings, and monitor brand sentiment automatically.",
       features: [
         "Blog post repurposer",
-        "SEO audit & keyword optimizer",
+        "SEO audit & keyword optimizer", 
         "Reddit sentiment tracker"
       ]
     },
@@ -46,7 +37,7 @@ const AutomationFeatures = () => {
       icon: <Globe className="h-8 w-8 text-primary" />,
       description: "Extract valuable data from websites, LinkedIn, and other online resources effortlessly.",
       features: [
-        "Lead website scraper",
+        "Scrape and categorise lead websites",
         "LinkedIn company page scraper",
         "URL metadata extractor"
       ]
@@ -56,7 +47,7 @@ const AutomationFeatures = () => {
       icon: <FileText className="h-8 w-8 text-primary" />,
       description: "Streamline document processing, email management, and scheduling to save time.",
       features: [
-        "Document processing",
+        "Document processing (PDF extraction, data entry)",
         "Email triage & auto-responses",
         "Calendar & meeting scheduling"
       ]
@@ -99,6 +90,10 @@ const AutomationFeatures = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-xl text-gray-600 italic">And many more...</p>
         </div>
       </div>
     </section>
