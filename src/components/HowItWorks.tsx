@@ -26,8 +26,8 @@ const HowItWorks = () => {
     },
     {
       icon: <Check className="h-6 w-6 text-primary" />,
-      title: "Weekly support (optional)",
-      description: "Get 45-minute weekly consultations for strategy and updates.",
+      title: "Weekly support",
+      description: "Get optional 45-minute weekly consultations for strategy and updates.",
       step: 3
     }
   ];
