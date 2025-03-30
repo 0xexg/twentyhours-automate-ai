@@ -117,59 +117,6 @@ const AutomationFeatures = () => {
             </Card>
           ))}
         </div>
-
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="overflow-hidden border border-gray-100">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Keyword Researcher</h3>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-800">Research keywords</span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-800">Analyze metrics</span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-800">Generate report</span>
-              </div>
-              <div className="flex justify-between items-center mt-4">
-                <div className="flex space-x-2">
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs">AI</div>
-                  <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
-                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="#4285F4"/>
-                      <path d="M16.0755 13H7.92453C5.20201 13 3 15.2 3 17.9C3 20.6 5.20201 22.8 7.92453 22.8H16.0755C18.798 22.8 21 20.6 21 17.9C21 15.2 18.798 13 16.0755 13Z" fill="#34A853"/>
-                      <path d="M20 17.8889C20 19.6 18.5 21 16.6667 21H7.33333C5.5 21 4 19.6 4 17.8889C4 16.1778 5.5 14.7778 7.33333 14.7778H16.6667C18.5 14.7778 20 16.1778 20 17.8889Z" fill="#FBBC05"/>
-                      <path d="M6.46447 15.4645L17.5355 4.46448" stroke="#EA4335" strokeWidth="2"/>
-                    </svg>
-                  </div>
-                </div>
-                <button className="text-primary hover:text-primary/80 transition-colors">
-                  View template
-                </button>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="overflow-hidden border border-gray-100">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">YouTube to Ghost Blog Converter</h3>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-800">Extract transcript</span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-800">Generate blog content</span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-800">Optimize for SEO</span>
-              </div>
-              <div className="flex justify-between items-center mt-4">
-                <div className="flex space-x-2">
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs">AI</div>
-                  <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center">
-                    <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                  </div>
-                </div>
-                <button className="text-primary hover:text-primary/80 transition-colors">
-                  View template
-                </button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );
