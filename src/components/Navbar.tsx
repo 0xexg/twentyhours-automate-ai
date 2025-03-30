@@ -15,6 +15,14 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex md:items-center md:space-x-8">
+            <a 
+              href="https://x.com/elliot_garreffa" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium"
+            >
+              Learn More
+            </a>
             <Link to="/features" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               Agents & Automations
             </Link>
