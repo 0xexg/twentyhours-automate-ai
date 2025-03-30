@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { 
@@ -22,7 +21,7 @@ const Companies = () => {
   // Company logos with Clippit and new logos
   const companyLogos = [
     { id: 1, name: "Clippit", logo: "/lovable-uploads/d4ea2c8c-c517-4745-b518-7cd267663888.png", url: "https://clippit.fm/" },
-    { id: 2, name: "M Company", logo: "/lovable-uploads/0fb88171-788a-4cf2-98ac-619468e377ab.png", url: "#" },
+    { id: 2, name: "M Company", logo: "/lovable-uploads/0fb88171-788a-4cf2-98ac-619468e377ab.png", url: "https://mitti.com/" },
     { id: 3, name: "Company 3" },
     { id: 4, name: "Company 4" },
     { id: 5, name: "Company 5" },
