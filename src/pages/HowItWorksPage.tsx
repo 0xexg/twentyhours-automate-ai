@@ -2,18 +2,18 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Announcement from '@/components/Announcement';
-import AutomationFeatures from '@/components/AutomationFeatures';
+import HowItWorks from '@/components/HowItWorks';
 import CTASection from '@/components/CTASection';
 
-const Features = () => {
+const HowItWorksPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Announcement />
       <Navbar />
-      <AutomationFeatures />
+      <HowItWorks />
       <CTASection />
     </div>
   );
 };
 
-export default Features;
+export default HowItWorksPage;
