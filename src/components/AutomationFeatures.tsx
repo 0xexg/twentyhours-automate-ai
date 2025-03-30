@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   ShoppingCart, 
@@ -11,7 +10,6 @@ import { Input } from '@/components/ui/input';
 
 interface FeatureCategory {
   icon: React.ReactNode;
-  emoji: string;
   title: string;
   items: string[];
 }
@@ -20,42 +18,38 @@ const AutomationFeatures = () => {
   const categories: FeatureCategory[] = [
     {
       icon: <ShoppingCart className="h-6 w-6 text-primary" />,
-      emoji: "🛒",
       title: "Sales & CRM",
       items: [
-        "Lead tracking & follow-up automations",
-        "CRM data enrichment & cleanup",
-        "Lead researcher"
+        "• Lead tracking & follow-up automations",
+        "• CRM data enrichment & cleanup",
+        "• Lead researcher"
       ]
     },
     {
       icon: <Megaphone className="h-6 w-6 text-primary" />,
-      emoji: "📢",
       title: "Marketing & SEO",
       items: [
-        "Blog post repurposer",
-        "SEO audit & keyword optimizer",
-        "Reddit sentiment tracker"
+        "• Blog post repurposer",
+        "• SEO audit & keyword optimizer",
+        "• Reddit sentiment tracker"
       ]
     },
     {
       icon: <Database className="h-6 w-6 text-primary" />,
-      emoji: "📈",
       title: "Web Scraping",
       items: [
-        "Scrape and categorise lead websites",
-        "LinkedIn company page scraper",
-        "URL metadata extractor"
+        "• Scrape and categorise lead websites",
+        "• LinkedIn company page scraper",
+        "• URL metadata extractor"
       ]
     },
     {
       icon: <Calendar className="h-6 w-6 text-primary" />,
-      emoji: "📊",
       title: "Operations & Admin",
       items: [
-        "Document processing (PDF extraction, data entry)",
-        "Email triage & auto-responses",
-        "Calendar & meeting scheduling"
+        "• Document processing (PDF extraction, data entry)",
+        "• Email triage & auto-responses",
+        "• Calendar & meeting scheduling"
       ]
     }
   ];
@@ -103,7 +97,7 @@ const AutomationFeatures = () => {
                     {category.icon}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">
-                    {category.emoji} {category.title}
+                    {category.title}
                   </h3>
                 </div>
                 <ul className="space-y-2">
