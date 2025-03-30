@@ -15,7 +15,7 @@ const CTASection = () => {
           size="lg" 
           className="bg-[#a4ff90] hover:bg-[#8dff77] text-gray-800 px-8 py-6 text-lg h-auto"
         >
-          Get Started – Book a Call
+          Book a Call
           <ArrowRight className="h-5 w-5 ml-2" />
         </Button>
       </div>
