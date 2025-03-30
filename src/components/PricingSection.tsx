@@ -65,9 +65,9 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <Card 
               key={index} 
-              className={`overflow-hidden ${plan.popular ? 'bg-gray-900 text-white' : 'bg-white border border-gray-100'} hover:shadow-xl transition-shadow`}
+              className={`overflow-hidden flex flex-col ${plan.popular ? 'bg-gray-900 text-white' : 'bg-white border border-gray-100'} hover:shadow-xl transition-shadow`}
             >
-              <CardContent className="p-8">
+              <CardContent className="p-8 flex flex-col h-full">
                 <div className="flex items-center gap-2 mb-2">
                   <div className={`p-2 rounded-full ${plan.popular ? 'bg-white/10' : 'bg-primary/10'}`}>
                     {plan.icon}
@@ -81,10 +81,10 @@ const PricingSection = () => {
                 
                 <Separator className={plan.popular ? 'bg-gray-700' : 'bg-gray-200'} />
                 
-                <ul className="my-6 space-y-4">
+                <ul className="my-6 space-y-4 flex-grow">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
-                      <Check className={`h-5 w-5 mt-0.5 ${plan.popular ? 'text-primary' : 'text-primary'}`} />
+                      <Check className={`h-5 w-5 mt-0.5 ${plan.popular ? 'text-green-400' : 'text-green-400'}`} />
                       <span>{feature.text}</span>
                     </li>
                   ))}
@@ -93,13 +93,16 @@ const PricingSection = () => {
                 <Separator className={plan.popular ? 'bg-gray-700' : 'bg-gray-200'} />
                 
                 <div className="mt-6 flex items-end gap-2">
-                  <span className="text-3xl font-bold">{plan.price}</span>
+                  <span className="text-4xl font-bold">{plan.price}</span>
                   <span className={`mb-1 ${plan.popular ? 'text-gray-300' : 'text-gray-500'}`}>USD/month</span>
                 </div>
                 
                 <Button 
-                  className={`mt-6 w-full ${plan.popular ? 'bg-white text-gray-900 hover:bg-gray-200' : ''}`}
-                  variant={plan.popular ? 'default' : 'default'}
+                  className={`mt-6 w-full ${
+                    plan.popular 
+                      ? 'bg-white text-gray-900 hover:bg-gray-200' 
+                      : 'bg-green-400 text-white hover:bg-green-500'
+                  }`}
                 >
                   {plan.ctaText}
                   <ArrowRight className="h-4 w-4 ml-2" />
@@ -110,7 +113,7 @@ const PricingSection = () => {
         </div>
         
         <div className="text-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-gray-800">
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
             Start Now – Book a Call
           </Button>
         </div>
