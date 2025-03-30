@@ -9,7 +9,6 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Card } from '@/components/ui/card';
-// Import an image placeholder instead of the direct URL that's not working
 import { Skeleton } from '@/components/ui/skeleton';
 
 const Companies = () => {
@@ -20,9 +19,9 @@ const Companies = () => {
     "Financial Services"
   ];
 
-  // Updated company logos without the direct image import
+  // Company logos with Clippit logo path
   const companyLogos = [
-    { id: 1, name: "Clippit" },
+    { id: 1, name: "Clippit", logo: "/lovable-uploads/d4ea2c8c-c517-4745-b518-7cd267663888.png" },
     { id: 2, name: "Company 2" },
     { id: 3, name: "Company 3" },
     { id: 4, name: "Company 4" },
@@ -62,7 +61,15 @@ const Companies = () => {
             {companyLogos.map((company) => (
               <CarouselItem key={company.id} className="md:basis-1/3 lg:basis-1/4">
                 <Card className="h-32 flex items-center justify-center bg-white border border-gray-100">
-                  <p className="text-gray-400">{company.name}</p>
+                  {company.logo ? (
+                    <img 
+                      src={company.logo} 
+                      alt={company.name} 
+                      className="max-h-20 max-w-full object-contain"
+                    />
+                  ) : (
+                    <p className="text-gray-400">{company.name}</p>
+                  )}
                 </Card>
               </CarouselItem>
             ))}
