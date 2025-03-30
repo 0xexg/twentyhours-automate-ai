@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   UserCheck, 
@@ -93,7 +92,7 @@ const AutomationFeatures = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-xl text-gray-600 italic">And many more...</p>
+          <p className="text-3xl font-bold text-gray-900 italic">And many more...</p>
         </div>
       </div>
     </section>
