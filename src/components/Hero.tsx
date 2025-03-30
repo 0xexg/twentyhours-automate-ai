@@ -14,7 +14,7 @@ const Hero = () => {
               <span className="text-primary">It'll Be Done in 20 Hours.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 md:max-w-2xl">
-              Transform your business with intelligent AI agents and automations. Save time, reduce errors, and boost productivity.
+              Transform your business with intelligent AI agents and automations. Save time, reduce errors, and boost growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button variant="default" className="bg-primary hover:bg-primary/90 text-gray-800 px-6 py-3 rounded-md text-base font-medium">
